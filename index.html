@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Protecting Capital — Which Sectors Weather Market Crashes Best?</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">R · tidyquant · Yahoo Finance · 47 Stocks</div>
+      <h1>Protecting Capital: which sectors <em>actually</em> weather a crash?</h1>
+      <p class="lead">Defensive sectors are supposed to protect you when markets fall. But a demand shock and an inflation shock are not the same crisis — and this study finds that sector "defensiveness" flips depending on which one you're in.</p>
+      <div class="scroll-cue"><span>SCROLL FOR THE FINDING</span><span class="arrow">↓</span></div>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="n">47</div><div class="l">Stocks analyzed</div></div>
+      <div class="hstat"><div class="n">6</div><div class="l">Sectors + S&amp;P 500</div></div>
+      <div class="hstat"><div class="n">2</div><div class="l">Structurally different crashes</div></div>
+      <div class="hstat"><div class="n">1962–</div><div class="l">Price history used</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ THE QUESTION ============ -->
+<section class="wrap reveal">
+  <div class="eyebrow">The Question</div>
+  <h2>Does "defensive sector" mean the same thing every time markets crash?</h2>
+  <div class="question-block">
+    <p>During stock market downturns, which sectors experience the smallest percent decline — and does that hierarchy shift depending on what actually caused the crash?</p>
+  </div>
+  <p class="lead" style="margin-bottom:44px;">Two structurally different crashes were compared using three metrics, computed sector-by-sector from adjusted closing prices across Technology, Healthcare, Energy, Financial, Consumer Staples and Defense.</p>
+
+  <div class="glossary">
+    <div class="gterm">
+      <div class="tag">Metric 01</div>
+      <h4>Maximum Drawdown</h4>
+      <p>The largest peak-to-trough percentage loss during the crash window — how much capital an investor actually lost at the worst point.</p>
+    </div>
+    <div class="gterm">
+      <div class="tag">Metric 02</div>
+      <h4>Crash Beta</h4>
+      <p>Sensitivity relative to the S&amp;P 500 during the crash itself. Above 1.0 means a sector fell harder than the market; below 1.0 means it cushioned the blow.</p>
+    </div>
+    <div class="gterm">
+      <div class="tag">Metric 03</div>
+      <h4>Recovery Time</h4>
+      <p>Trading days needed for a sector's price to climb back to its pre-crash high — how long the pain actually lasted.</p>
+    </div>
+  </div>
+
+  <div class="crash-strip">
+    <div class="crash-card covid">
+      <div><span class="dot"></span><b>Covid-19 Crash</b></div>
+      <div class="when">FEB – MAR 2020 · DEMAND SHOCK</div>
+      <h4>An external panic</h4>
+      <p>A sudden, exogenous halt to economic activity. Liquidity dried up overnight, but once policy responded, it resolved fast.</p>
+    </div>
+    <div class="crash-card bear">
+      <div><span class="dot"></span><b>2022 Bear Market</b></div>
+      <div class="when">JAN – OCT 2022 · MONETARY TIGHTENING</div>
+      <h4>A slow structural squeeze</h4>
+      <p>Aggressive rate hikes to fight inflation put sustained pressure on valuations and lending margins over many months.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE: THE REVERSAL ============ -->
+<section class="reversal">
+  <div class="wrap reversal-inner reveal">
+    <div>
+      <div class="eyebrow">The Central Finding</div>
+      <h2>Same sector. Opposite crash. Opposite outcome.</h2>
+      <p class="lead">Plotting each sector's maximum drawdown in both crashes side by side reveals crossing lines — sectors don't hold a fixed rank. Energy and Defense were the worst-hit sectors in the panic-driven crash, then became two of the strongest performers in the inflation-driven one. Technology did the exact reverse.</p>
+      <div class="callouts">
+        <div class="callout" style="border-left:3px solid var(--c-energy);">
+          <div class="who mono" style="color:var(--c-energy);">ENERGY</div>
+          <p>Worst drawdown of any sector in Covid (−50.9%, 596-day recovery) — then the <b>second-smallest</b> drawdown of any sector in the bear market.</p>
+        </div>
+        <div class="callout" style="border-left:3px solid var(--c-tech);">
+          <div class="who mono" style="color:var(--c-tech);">TECHNOLOGY</div>
+          <p>Fastest recovery of any sector after Covid (87 days) — then the deepest drawdown and highest crash beta (1.53) once rates rose.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slope-wrap">
+      <div class="slope-cols"><span>COVID-19</span><span>BEAR MARKET</span></div>
+      <svg id="slopeChart" viewBox="0 0 460 380" style="width:100%; height:auto; display:block;"></svg>
+      <div class="slope-legend" id="slopeLegend"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DRAWDOWN CHART ============ -->
+<section class="wrap reveal">
+  <div class="eyebrow">Metric 01 · Capital Loss</div>
+  <h2>Maximum drawdown by sector</h2>
+  <p class="lead" style="margin-bottom:36px;">How far each sector fell at its worst point, in each crash. Consumer Staples held the smallest drawdown both times — but as the next chart shows, that protection came at a cost.</p>
+  <div class="chart-card">
+    <div class="chart-head">
+      <h3>Peak-to-trough loss (%)</h3>
+      <div class="chart-note">SOURCE: R / TIDYQUANT · ADJUSTED CLOSE</div>
+    </div>
+    <div class="bars" id="drawdownChart"></div>
+    <div class="chart-legend">
+      <div class="leg-item"><span class="leg-dot" style="background:var(--covid);"></span>Covid-19</div>
+      <div class="leg-item"><span class="leg-dot" style="background:var(--bear);"></span>Bear Market</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECOVERY CHART ============ -->
+<section class="wrap reveal">
+  <div class="eyebrow">Metric 03 · Time To Heal</div>
+  <h2>Recovery time by sector</h2>
+  <p class="lead" style="margin-bottom:36px;">Days needed to climb back to the pre-crash high. Healthcare recovered in roughly the same time either way (~130 days) — the only sector that did.</p>
+  <div class="chart-card">
+    <div class="chart-head">
+      <h3>Trading days to full recovery</h3>
+      <div class="chart-note">CAPPED AT 800 DAYS FOR READABILITY</div>
+    </div>
+    <div class="bars" id="recoveryChart"></div>
+    <div class="chart-legend">
+      <div class="leg-item"><span class="leg-dot" style="background:var(--covid);"></span>Covid-19</div>
+      <div class="leg-item"><span class="leg-dot" style="background:var(--bear);"></span>Bear Market</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTOR PROFILES ============ -->
+<section class="wrap reveal">
+  <div class="eyebrow">Sector By Sector</div>
+  <h2>Six sectors, six very different crash personalities</h2>
+  <div class="profiles" id="profiles"></div>
+</section>
+
+<!-- ============ HYPOTHESIS / FINDINGS ============ -->
+<section class="wrap reveal">
+  <div class="eyebrow">Hypothesis vs. Evidence</div>
+  <h2>What the data confirmed — and what it didn't expect</h2>
+  <div class="question-block">
+    <p>Healthcare and Consumer Staples will protect capital in any downturn — but Energy will rank worst in a demand-driven crash and best in an inflation-driven one.</p>
+  </div>
+  <div class="findings-grid">
+    <div class="finding confirmed">
+      <span class="status">Confirmed</span>
+      <h4>Healthcare is the only true all-weather defensive sector</h4>
+      <p>Lowest beta, smallest drawdowns, and the fastest recovery of any sector in <em>both</em> crashes. No other sector matched this consistency.</p>
+    </div>
+    <div class="finding confirmed">
+      <span class="status">Partially confirmed</span>
+      <h4>Consumer Staples protects on the way down, not on the way up</h4>
+      <p>Smallest drawdown of any sector in both crashes — but one of the slowest recoveries. Capital preservation and recovery speed turned out to be two separate skills entirely.</p>
+    </div>
+    <div class="finding confirmed">
+      <span class="status">Confirmed</span>
+      <h4>Energy fully reversed between crashes</h4>
+      <p>Worst sector in the demand shock (−50.9%, 596 days), second-best in the inflation shock (−33.7%, 350 days). The clearest evidence that crash catalyst — not sector label — drives outcomes.</p>
+    </div>
+    <div class="finding unexpected">
+      <span class="status">Unexpected</span>
+      <h4>Defense mirrored Energy in reverse</h4>
+      <p>Not part of the original hypothesis. Above-market beta and the single slowest recovery in Covid (733 days) — then the fastest recovery of any sector in the bear market (186 days).</p>
+    </div>
+  </div>
+  <p class="pullquote">Sector defensiveness is not a fixed property — the <span>macroeconomic catalyst</span> of a crash decides which sectors protect capital, and which amplify losses.</p>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="f-col">
+        <h5>About this study</h5>
+        <p>47 stocks across six sectors, benchmarked against the S&amp;P 500 (SPY), analyzed across the Covid-19 crash (Feb–Mar 2020) and the 2022 bear market (Jan–Oct 2022) using adjusted closing price data.</p>
+      </div>
+      <div class="f-col">
+        <h5>Data &amp; tools</h5>
+        <p>Historical prices sourced from Yahoo Finance via the tidyquant package in R. Metrics computed independently for each crash window.</p>
+      </div>
+      <div class="f-col">
+        <h5>Note</h5>
+        <p>Built to present independent research on sector behavior during market stress.</p>
+      </div>
+    </div>
+    <div class="disclaimer">This page presents historical research findings for educational purposes only and is not investment advice. Past sector performance during specific crashes does not predict future performance.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace">
+<rect x="0" y="0" width="700" height="420" fill="#080C15"/>
+<text x="50" y="24" font-size="13" fill="#EDE7D8">Recovery Time by Sector (days)</text>
+<line x1="50" y1="360" x2="670" y2="360" stroke="#1E293F" stroke-width="1"/>
+<rect x="65.94285714285714" y="232.0" width="24.8" height="128.0" fill="#FF5D5D" rx="2"/>
+<rect x="97.82857142857142" y="242.0" width="24.8" height="118.0" fill="#E8A33D" rx="2"/>
+<text x="78.34285714285714" y="226.0" font-size="8.5" fill="#5B6376" text-anchor="middle">320d</text>
+<text x="110.22857142857143" y="236.0" font-size="8.5" fill="#5B6376" text-anchor="middle">295d</text>
+<text x="94.28571428571428" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Con. Staples</text>
+<rect x="154.5142857142857" y="308.0" width="24.8" height="52.0" fill="#FF5D5D" rx="2"/>
+<rect x="186.39999999999998" y="307.6" width="24.8" height="52.400000000000006" fill="#E8A33D" rx="2"/>
+<text x="166.9142857142857" y="302.0" font-size="8.5" fill="#5B6376" text-anchor="middle">130d</text>
+<text x="198.79999999999998" y="301.6" font-size="8.5" fill="#5B6376" text-anchor="middle">131d</text>
+<text x="182.85714285714283" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Healthcare</text>
+<rect x="243.0857142857143" y="325.2" width="24.8" height="34.8" fill="#FF5D5D" rx="2"/>
+<rect x="274.9714285714286" y="187.60000000000002" width="24.8" height="172.39999999999998" fill="#E8A33D" rx="2"/>
+<text x="255.4857142857143" y="319.2" font-size="8.5" fill="#5B6376" text-anchor="middle">87d</text>
+<text x="287.37142857142857" y="181.60000000000002" font-size="8.5" fill="#5B6376" text-anchor="middle">431d</text>
+<text x="271.42857142857144" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Technology</text>
+<rect x="331.65714285714284" y="237.2" width="24.8" height="122.8" fill="#FF5D5D" rx="2"/>
+<rect x="363.54285714285714" y="129.60000000000002" width="24.8" height="230.39999999999998" fill="#E8A33D" rx="2"/>
+<text x="344.0571428571428" y="231.2" font-size="8.5" fill="#5B6376" text-anchor="middle">307d</text>
+<text x="375.9428571428571" y="123.60000000000002" font-size="8.5" fill="#5B6376" text-anchor="middle">576d</text>
+<text x="360.0" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Financial</text>
+<rect x="420.2285714285714" y="66.80000000000001" width="24.8" height="293.2" fill="#FF5D5D" rx="2"/>
+<rect x="452.1142857142857" y="285.6" width="24.8" height="74.4" fill="#E8A33D" rx="2"/>
+<text x="432.6285714285714" y="60.80000000000001" font-size="8.5" fill="#5B6376" text-anchor="middle">733d</text>
+<text x="464.5142857142857" y="279.6" font-size="8.5" fill="#5B6376" text-anchor="middle">186d</text>
+<text x="448.57142857142856" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Defense</text>
+<rect x="508.79999999999995" y="121.6" width="24.8" height="238.4" fill="#FF5D5D" rx="2"/>
+<rect x="540.6857142857143" y="220.0" width="24.8" height="140.0" fill="#E8A33D" rx="2"/>
+<text x="521.1999999999999" y="115.6" font-size="8.5" fill="#5B6376" text-anchor="middle">596d</text>
+<text x="553.0857142857143" y="214.0" font-size="8.5" fill="#5B6376" text-anchor="middle">350d</text>
+<text x="537.1428571428571" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Energy</text>
+<rect x="597.3714285714286" y="269.2" width="24.8" height="90.8" fill="#FF5D5D" rx="2"/>
+<rect x="629.2571428571429" y="160.79999999999998" width="24.8" height="199.20000000000002" fill="#E8A33D" rx="2"/>
+<text x="609.7714285714286" y="263.2" font-size="8.5" fill="#5B6376" text-anchor="middle">227d</text>
+<text x="641.6571428571428" y="154.79999999999998" font-size="8.5" fill="#5B6376" text-anchor="middle">498d</text>
+<text x="625.7142857142858" y="378" font-size="9" fill="#5B6376" text-anchor="middle">Index</text>
+<rect x="50" y="397" width="10" height="10" fill="#FF5D5D"/>
+<text x="66" y="406" font-size="10" fill="#5B6376">Covid-19</text>
+<rect x="160" y="397" width="10" height="10" fill="#E8A33D"/>
+<text x="176" y="406" font-size="10" fill="#5B6376">Bear Market</text>
+</svg>

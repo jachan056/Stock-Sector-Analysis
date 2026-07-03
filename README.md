@@ -17,7 +17,13 @@ project/
 │       ├── slope_reversal.svg          ← static export of the drawdown-reversal chart
 │       ├── drawdown_by_sector.svg      ← static export of the drawdown bar chart
 │       ├── recovery_by_sector.svg      ← static export of the recovery-time bar chart
-│       └── generate_figures.py         ← regenerates the three SVGs above
+│       ├── generate_figures.py         ← regenerates the three SVGs above
+│       └── notebook/                   ← original base-R plots, extracted as-is
+│           ├── max_drawdown_by_sector.png
+│           ├── recovery_days_by_sector.png
+│           ├── crash_beta_by_sector.png
+│           ├── covid_normalized_price_paths.png
+│           └── drawdown_vs_recovery_scatter.png
 └── README.md                      ← this file
 ```
 
@@ -45,6 +51,17 @@ PDF report, or anywhere outside the website. Run
 `python3 assets/figures/generate_figures.py` from inside that folder any
 time you update the numbers in `main.js` and want matching static images
 (the script uses the same values; keep them in sync by hand for now).
+
+## Original notebook figures
+
+`assets/figures/notebook/` contains the five actual base-R plots pulled
+straight out of your analysis notebook (unedited, same pixels R rendered):
+Maximum Drawdown by Sector, Recovery Days by Sector, Crash Beta by Sector,
+the normalized Covid price-path chart, and the Drawdown-vs-Recovery scatter.
+They're wired into `index.html` in a "From The Notebook" gallery section
+just above the Hypothesis vs. Findings section. If you rerun your notebook
+and want to swap in updated versions, just overwrite the PNGs in that
+folder with the same filenames — the HTML doesn't need to change.
 
 ## Design notes
 

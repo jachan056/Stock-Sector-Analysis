@@ -3,30 +3,6 @@
 A single-page research site built from your sector crash-analysis notebook
 (47 stocks, 6 sectors, S&P 500 benchmark, Covid-19 crash vs. 2022 bear market).
 
-## Folder structure
-
-```
-project/
-├── index.html                     ← the site itself, open this in a browser
-├── css/
-│   └── style.css                  ← all styling, colors, type, layout
-├── js/
-│   └── main.js                    ← sector data + chart rendering logic
-├── assets/
-│   └── figures/
-│       ├── slope_reversal.svg          ← static export of the drawdown-reversal chart
-│       ├── drawdown_by_sector.svg      ← static export of the drawdown bar chart
-│       ├── recovery_by_sector.svg      ← static export of the recovery-time bar chart
-│       ├── generate_figures.py         ← regenerates the three SVGs above
-│       └── notebook/                   ← original base-R plots, extracted as-is
-│           ├── max_drawdown_by_sector.png
-│           ├── recovery_days_by_sector.png
-│           ├── crash_beta_by_sector.png
-│           ├── covid_normalized_price_paths.png
-│           └── drawdown_vs_recovery_scatter.png
-└── README.md                      ← this file
-```
-
 ## How to view it
 
 Just open `index.html` in a browser — no build step, no server required.
